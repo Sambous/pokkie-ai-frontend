@@ -15,14 +15,14 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "Pokkie — AI receptionist for beauty & local businesses",
+  title: "Pokkie — AI receptionist for restaurants, beauty & more",
   description:
-    "Pokkie answers every call, books more appointments, and talks to your customers — so beauty salons, restaurants, and small businesses never miss a booking.",
+    "Pokkie answers every call, books more appointments, and talks to your customers — for restaurants, beauty salons, hairstylists, and small businesses.",
   metadataBase: new URL("https://pokkie.ai"),
   openGraph: {
     title: "Pokkie.ai",
     description:
-      "The sexy AI receptionist that takes more bookings for beauty, restaurants, and small businesses.",
+      "AI receptionist that takes more bookings for restaurants, beauty, and local businesses.",
     url: "https://pokkie.ai",
     siteName: "Pokkie",
     type: "website",

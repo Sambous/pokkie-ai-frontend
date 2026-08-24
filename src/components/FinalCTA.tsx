@@ -12,7 +12,7 @@ export function FinalCTA() {
                 Ready to hear Pokkie?
               </h2>
               <p className="mt-4 max-w-md text-blush-deep/90">
-                One call. Your number. Hear how she books for a beauty brand like
+                One call. Your number. Hear how she books for a business like
                 yours.
               </p>
             </div>
@@ -33,7 +33,7 @@ export function Footer() {
             Pokkie<span className="text-rose-bright">.</span>
           </p>
           <p className="mt-1 text-xs text-muted">
-            AI receptionist for beauty, restaurants & small businesses.
+            AI receptionist for restaurants, beauty & small businesses.
           </p>
         </div>
         <div className="flex flex-wrap gap-5 text-xs text-muted">

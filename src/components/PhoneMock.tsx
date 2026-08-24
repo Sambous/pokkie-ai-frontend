@@ -29,7 +29,7 @@ export function PhoneMock() {
             Meet Pokkie on the line
           </h2>
           <p className="mt-4 max-w-md text-blush-deep/85">
-            Natural turn-taking, booking logic, and a voice that fits a beauty
+            Natural turn-taking, booking logic, and a voice that fits your
             brand — not a call centre script.
           </p>
           <a

@@ -32,8 +32,8 @@ export function Features() {
             Front desk energy. Zero missed rings.
           </h2>
           <p className="mt-3 text-blush-deep/85">
-            Built for teams who sell with presence — salons, clinics of beauty,
-            dining rooms, and local shops that live on the phone.
+            Built for teams that live on the phone — restaurants, salons,
+            clinics, and local shops that can&apos;t afford a missed booking.
           </p>
         </motion.div>
 

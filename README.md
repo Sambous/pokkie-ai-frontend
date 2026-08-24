@@ -1,6 +1,6 @@
-# Pokkie.ai
+# pokkie-ai-frontend
 
-Marketing site for **Pokkie** — AI receptionist for beauty, restaurants, and small businesses.
+Marketing site for **Pokkie** — AI receptionist for restaurants, beauty, hairstylists, and small businesses.
 
 ## Stack
 

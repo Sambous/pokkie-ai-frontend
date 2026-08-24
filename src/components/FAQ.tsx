@@ -6,7 +6,7 @@ import { useState } from "react";
 const faqs = [
   {
     q: "What is Pokkie?",
-    a: "Pokkie is an AI receptionist for beauty studios, restaurants, and small businesses. She answers calls, books appointments, and talks to customers so you never miss a booking.",
+    a: "Pokkie is an AI receptionist for restaurants, beauty salons, hairstylists, and small businesses. She answers calls, books appointments, and talks to customers so you never miss a booking.",
   },
   {
     q: "Does she sound robotic?",
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "Is this the same as Superb Call?",
-    a: "Superb Call focuses on medical. Pokkie is the brand for beauty, restaurants, and local businesses — same ambition to automate reception, different vibe and playbook.",
+    a: "Superb Call focuses on medical. Pokkie is the brand for restaurants, beauty, and local businesses — same ambition to automate reception, different vibe and playbook.",
   },
 ];
 
