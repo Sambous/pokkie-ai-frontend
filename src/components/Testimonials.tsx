@@ -1,0 +1,65 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+const quotes = [
+  {
+    quote:
+      "Pokkie took over our evening rush calls. We stopped losing walk-in energy to the phone — and the books filled faster.",
+    name: "Lina M.",
+    role: "Owner, Atelier Glow",
+  },
+  {
+    quote:
+      "Guests think they’re talking to our host. Confirmations go out, large parties get handled, and we stay on the floor.",
+    name: "Marco V.",
+    role: "GM, Casa Verde",
+  },
+  {
+    quote:
+      "After-hours enquiries used to die in voicemail. Now Pokkie books them before I open the shop.",
+    name: "Samira K.",
+    role: "Founder, Nail Theory",
+  },
+];
+
+export function Testimonials() {
+  return (
+    <section className="border-t border-white/5 py-24 sm:py-28">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="font-display text-3xl font-bold tracking-tight text-cream sm:text-4xl"
+        >
+          Loved where bookings matter
+        </motion.h2>
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
+          {quotes.map((q, i) => (
+            <motion.blockquote
+              key={q.name}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08 }}
+              className="gloss-panel flex flex-col rounded-3xl p-7"
+            >
+              <p className="flex-1 text-sm leading-relaxed text-blush sm:text-[15px]">
+                “{q.quote}”
+              </p>
+              <footer className="mt-6 border-t border-white/8 pt-4">
+                <cite className="not-italic">
+                  <span className="block text-sm font-semibold text-cream">
+                    {q.name}
+                  </span>
+                  <span className="text-xs text-muted">{q.role}</span>
+                </cite>
+              </footer>
+            </motion.blockquote>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
