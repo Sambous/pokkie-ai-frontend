@@ -1,23 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const features = [
-  {
-    title: "Answers 24/7",
-    body: "Rush hour, lunch break, after close — Pokkie picks up instantly so every enquiry gets a human-feeling reply.",
-  },
-  {
-    title: "Books more",
-    body: "Captures appointments, confirms details, and follows up so chairs and tables stay full — not voicemails.",
-  },
-  {
-    title: "Sounds human",
-    body: "Natural tone, no robotic menus. Guests ask questions, change bookings, and feel looked after.",
-  },
-];
+import { useI18n } from "@/lib/i18n";
 
 export function Features() {
+  const { t } = useI18n();
+
   return (
     <section
       id="features"
@@ -32,17 +20,14 @@ export function Features() {
           className="max-w-2xl"
         >
           <h2 className="font-display text-3xl font-bold tracking-tight text-cream sm:text-5xl">
-            Front desk energy.
-            <span className="block text-gradient">Zero missed rings.</span>
+            {t.features.title}
+            <span className="block text-gradient">{t.features.titleAccent}</span>
           </h2>
-          <p className="mt-4 text-lg text-blush-deep/85">
-            Built for teams that live on the phone — restaurants, salons,
-            clinics, and local shops that can&apos;t afford a missed booking.
-          </p>
+          <p className="mt-4 text-lg text-blush-deep/85">{t.features.intro}</p>
         </motion.div>
 
         <div className="mt-16 grid gap-5 md:grid-cols-3">
-          {features.map((f, i) => (
+          {t.features.items.map((f, i) => (
             <motion.article
               key={f.title}
               initial={{ opacity: 0, y: 28 }}

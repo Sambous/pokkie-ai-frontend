@@ -1,18 +1,10 @@
 "use client";
 
-const items = [
-  "Restaurants",
-  "Beauty salons",
-  "Hairstylists",
-  "Spas",
-  "Clinics",
-  "Boutiques",
-  "Cafés",
-  "Barbers",
-];
+import { useI18n } from "@/lib/i18n";
 
 export function Marquee() {
-  const loop = [...items, ...items];
+  const { t } = useI18n();
+  const loop = [...t.marquee, ...t.marquee];
 
   return (
     <div className="relative border-y border-white/5 bg-ink-soft/60 py-5 overflow-hidden">

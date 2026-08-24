@@ -1,29 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const quotes = [
-  {
-    quote:
-      "Pokkie took over our evening rush calls. We stopped losing walk-in energy to the phone — and the books filled faster.",
-    name: "Lina M.",
-    role: "Owner, Atelier Glow",
-  },
-  {
-    quote:
-      "Guests think they’re talking to our host. Confirmations go out, large parties get handled, and we stay on the floor.",
-    name: "Marco V.",
-    role: "GM, Casa Verde",
-  },
-  {
-    quote:
-      "After-hours enquiries used to die in voicemail. Now Pokkie books them before I open the shop.",
-    name: "Samira K.",
-    role: "Founder, Nail Theory",
-  },
-];
+import { useI18n } from "@/lib/i18n";
 
 export function Testimonials() {
+  const { t } = useI18n();
+
   return (
     <section className="border-t border-white/5 py-24 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
@@ -33,10 +15,10 @@ export function Testimonials() {
           viewport={{ once: true }}
           className="font-display text-3xl font-bold tracking-tight text-cream sm:text-4xl"
         >
-          Loved where bookings matter
+          {t.testimonials.title}
         </motion.h2>
         <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {quotes.map((q, i) => (
+          {t.testimonials.items.map((q, i) => (
             <motion.blockquote
               key={q.name}
               initial={{ opacity: 0, y: 24 }}

@@ -1,23 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const steps = [
-  {
-    title: "Forward your number",
-    body: "Point calls to Pokkie in minutes. Keep your existing line — guests dial the same number.",
-  },
-  {
-    title: "Teach her your vibe",
-    body: "Services, hours, tone, booking rules. Pokkie learns how your studio or restaurant talks.",
-  },
-  {
-    title: "Take more bookings",
-    body: "She answers, books, and summarises. You stay on the floor where the magic happens.",
-  },
-];
+import { useI18n } from "@/lib/i18n";
 
 export function HowItWorks() {
+  const { t } = useI18n();
+
   return (
     <section id="how" className="scroll-mt-20 border-t border-white/5 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
@@ -27,14 +15,12 @@ export function HowItWorks() {
           viewport={{ once: true }}
           className="font-display text-3xl font-bold tracking-tight text-cream sm:text-5xl"
         >
-          Live in days, not weeks
+          {t.how.title}
         </motion.h2>
-        <p className="mt-4 max-w-lg text-lg text-blush-deep/85">
-          No IT project. No call-center contract. Just a sharper front desk.
-        </p>
+        <p className="mt-4 max-w-lg text-lg text-blush-deep/85">{t.how.intro}</p>
 
         <ol className="mt-16 grid gap-8 md:grid-cols-3">
-          {steps.map((step, i) => (
+          {t.how.steps.map((step, i) => (
             <motion.li
               key={step.title}
               initial={{ opacity: 0, y: 24 }}

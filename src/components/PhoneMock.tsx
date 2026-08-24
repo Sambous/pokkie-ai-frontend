@@ -1,21 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const lines = [
-  { who: "Caller", text: "Hi, do you have anything tomorrow after 4?" },
-  {
-    who: "Pokkie",
-    text: "Absolutely — I have 4:30 and 5:15 for a cut & blow. Which feels better?",
-  },
-  { who: "Caller", text: "4:30 please. Under Maya." },
-  {
-    who: "Pokkie",
-    text: "You’re booked, Maya. I’ll text a confirmation. Anything else?",
-  },
-];
+import { useI18n } from "@/lib/i18n";
 
 export function PhoneMock() {
+  const { t } = useI18n();
+
   return (
     <section className="py-16 sm:py-24">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2">
@@ -26,17 +16,14 @@ export function PhoneMock() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-display text-3xl font-bold tracking-tight text-cream sm:text-4xl">
-            Meet Pokkie on the line
+            {t.phone.title}
           </h2>
-          <p className="mt-4 max-w-md text-blush-deep/85">
-            Natural turn-taking, booking logic, and a voice that fits your
-            brand — not a call centre script.
-          </p>
+          <p className="mt-4 max-w-md text-blush-deep/85">{t.phone.body}</p>
           <a
             href="#get-a-call"
             className="btn-primary mt-8 inline-flex rounded-full px-6 py-3 text-sm font-semibold text-white"
           >
-            Get a call from Pokkie
+            {t.phone.cta}
           </a>
         </motion.div>
 
@@ -60,18 +47,18 @@ export function PhoneMock() {
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-cream">Pokkie</p>
-                    <p className="text-xs text-muted">On a call · 0:42</p>
+                    <p className="text-xs text-muted">{t.phone.onCall}</p>
                   </div>
                 </div>
                 <span className="rounded-full bg-rose/20 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-rose-bright">
-                  Live
+                  {t.phone.live}
                 </span>
               </div>
 
               <div className="space-y-3">
-                {lines.map((line, i) => (
+                {t.phone.lines.map((line, i) => (
                   <motion.div
-                    key={line.text}
+                    key={`${line.who}-${line.text}`}
                     initial={{ opacity: 0, y: 8 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}

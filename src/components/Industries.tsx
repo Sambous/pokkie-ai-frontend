@@ -3,55 +3,13 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-
-const industries = [
-  {
-    id: "restaurants",
-    label: "Restaurants",
-    headline: "Peak service shouldn’t mean missed tables",
-    points: [
-      "Take reservations and large-party details during dinner rush",
-      "Answer dietary questions without pulling a host off the floor",
-      "Send confirmations so guests show up ready",
-    ],
-    stat: "+15%",
-    statLabel: "avg. more covers from calls",
-    image:
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80",
-  },
-  {
-    id: "beauty",
-    label: "Beauty",
-    headline: "Keep the chair full — even mid-appointment",
-    points: [
-      "Book color, cut, lashes, and spa slots while you’re with a client",
-      "Answer after-hours enquiries that usually go to Instagram DMs",
-      "Confirm appointments so no-shows drop and walk-ins stay welcome",
-    ],
-    stat: "+18%",
-    statLabel: "avg. more bookings captured",
-    image:
-      "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80",
-  },
-  {
-    id: "smb",
-    label: "Small businesses",
-    headline: "Always open for the call that pays the rent",
-    points: [
-      "Qualify leads, book appointments, and route urgent calls",
-      "Never leave a customer on voicemail after close",
-      "Stay personal where it matters — Pokkie handles the rest",
-    ],
-    stat: "+20%",
-    statLabel: "avg. more enquiries answered",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&w=1600&q=80",
-  },
-] as const;
+import { useI18n } from "@/lib/i18n";
 
 export function Industries() {
+  const { t } = useI18n();
   const [active, setActive] = useState(0);
-  const current = industries[active];
+  const industries = t.industries.items;
+  const current = industries[active] ?? industries[0];
 
   return (
     <section id="industries" className="scroll-mt-20 py-24 sm:py-32">
@@ -63,11 +21,10 @@ export function Industries() {
           transition={{ duration: 0.55 }}
         >
           <h2 className="font-display text-3xl font-bold tracking-tight text-cream sm:text-5xl">
-            Made for businesses that live on bookings
+            {t.industries.title}
           </h2>
           <p className="mt-4 max-w-xl text-lg text-blush-deep/85">
-            One Pokkie, tailored tone — whether you plate food, cut hair, or run
-            the shop.
+            {t.industries.intro}
           </p>
         </motion.div>
 

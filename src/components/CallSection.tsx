@@ -1,9 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useI18n } from "@/lib/i18n";
 import { CallForm } from "./CallForm";
 
 export function CallSection() {
+  const { t } = useI18n();
+
   return (
     <section className="relative py-20 sm:py-28">
       <div className="pointer-events-none absolute left-1/2 top-0 h-72 w-[36rem] -translate-x-1/2 rounded-full bg-rose/20 blur-[100px]" />
@@ -15,15 +18,12 @@ export function CallSection() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-champagne">
-            Try Pokkie
+            {t.callSection.eyebrow}
           </p>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-cream sm:text-4xl lg:text-5xl">
-            Hear her on your line
+            {t.callSection.title}
           </h2>
-          <p className="mt-4 max-w-md text-blush-deep/90">
-            Drop your details — Pokkie calls you back so you can hear the voice,
-            the booking flow, and the vibe.
-          </p>
+          <p className="mt-4 max-w-md text-blush-deep/90">{t.callSection.body}</p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 28 }}

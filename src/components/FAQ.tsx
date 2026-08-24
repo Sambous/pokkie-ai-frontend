@@ -2,37 +2,20 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-
-const faqs = [
-  {
-    q: "What is Pokkie?",
-    a: "Pokkie is an AI receptionist for restaurants, beauty salons, hairstylists, and small businesses. She answers calls, books appointments, and talks to customers so you never miss a booking.",
-  },
-  {
-    q: "Does she sound robotic?",
-    a: "No. Pokkie is tuned for natural conversation — warm, clear, and on-brand for hospitality and beauty. Guests can ask questions, change times, and book without menu hell.",
-  },
-  {
-    q: "How fast can we go live?",
-    a: "Most businesses forward their number, set services and hours, and start taking calls within a day. No heavy integration required to try her.",
-  },
-  {
-    q: "Is this the same as Superb Call?",
-    a: "Superb Call focuses on medical. Pokkie is the brand for restaurants, beauty, and local businesses — same ambition to automate reception, different vibe and playbook.",
-  },
-];
+import { useI18n } from "@/lib/i18n";
 
 export function FAQ() {
+  const { t } = useI18n();
   const [open, setOpen] = useState<number | null>(0);
 
   return (
     <section id="faq" className="scroll-mt-20 py-24 sm:py-28">
       <div className="mx-auto max-w-3xl px-5 sm:px-8">
         <h2 className="font-display text-3xl font-bold tracking-tight text-cream sm:text-4xl">
-          Questions, answered
+          {t.faq.title}
         </h2>
         <div className="mt-10 divide-y divide-white/10 border-y border-white/10">
-          {faqs.map((item, i) => {
+          {t.faq.items.map((item, i) => {
             const isOpen = open === i;
             return (
               <div key={item.q}>

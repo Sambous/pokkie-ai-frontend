@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { useI18n } from "@/lib/i18n";
 
 type CallFormProps = {
   id?: string;
@@ -8,6 +9,7 @@ type CallFormProps = {
 };
 
 export function CallForm({ id = "get-a-call", compact = false }: CallFormProps) {
+  const { t } = useI18n();
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
     "idle",
   );
@@ -36,16 +38,16 @@ export function CallForm({ id = "get-a-call", compact = false }: CallFormProps) 
 
       if (!res.ok) {
         setStatus("error");
-        setMessage(json.error ?? "Something went wrong. Try again.");
+        setMessage(json.error ?? t.form.errorGeneric);
         return;
       }
 
       setStatus("success");
-      setMessage("Got it — Pokkie will call you shortly.");
+      setMessage(t.form.success);
       form.reset();
     } catch {
       setStatus("error");
-      setMessage("Network error. Please try again.");
+      setMessage(t.form.errorNetwork);
     }
   }
 
@@ -57,41 +59,39 @@ export function CallForm({ id = "get-a-call", compact = false }: CallFormProps) 
     >
       <div className="mb-5">
         <p className="font-display text-xl font-semibold tracking-tight text-cream sm:text-2xl">
-          Get a call from Pokkie
+          {t.form.title}
         </p>
-        <p className="mt-1.5 text-sm text-blush-deep/80">
-          Hear how she sounds with your business — no commitment.
-        </p>
+        <p className="mt-1.5 text-sm text-blush-deep/80">{t.form.subtitle}</p>
       </div>
 
       <div className={`grid gap-3 ${compact ? "" : "sm:grid-cols-2"}`}>
         <label className="block sm:col-span-1">
           <span className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-muted">
-            Your name
+            {t.form.name}
           </span>
           <input
             name="name"
             required
             autoComplete="name"
             className="w-full rounded-xl border border-white/10 bg-ink/60 px-4 py-3 text-sm text-cream outline-none transition placeholder:text-muted focus:border-rose/50 focus:ring-2 focus:ring-rose/30"
-            placeholder="Alex"
+            placeholder={t.form.namePlaceholder}
           />
         </label>
         <label className="block sm:col-span-1">
           <span className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-muted">
-            Business
+            {t.form.business}
           </span>
           <input
             name="business"
             required
             autoComplete="organization"
             className="w-full rounded-xl border border-white/10 bg-ink/60 px-4 py-3 text-sm text-cream outline-none transition placeholder:text-muted focus:border-rose/50 focus:ring-2 focus:ring-rose/30"
-            placeholder="Studio Luxe"
+            placeholder={t.form.businessPlaceholder}
           />
         </label>
         <label className={`block ${compact ? "" : "sm:col-span-2"}`}>
           <span className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-muted">
-            Phone
+            {t.form.phone}
           </span>
           <input
             name="phone"
@@ -99,7 +99,7 @@ export function CallForm({ id = "get-a-call", compact = false }: CallFormProps) 
             required
             autoComplete="tel"
             className="w-full rounded-xl border border-white/10 bg-ink/60 px-4 py-3 text-sm text-cream outline-none transition placeholder:text-muted focus:border-rose/50 focus:ring-2 focus:ring-rose/30"
-            placeholder="+31 6 12 34 56 78"
+            placeholder={t.form.phonePlaceholder}
           />
         </label>
       </div>
@@ -109,7 +109,7 @@ export function CallForm({ id = "get-a-call", compact = false }: CallFormProps) 
         disabled={status === "loading"}
         className="btn-primary mt-5 w-full rounded-full px-6 py-3.5 text-sm font-semibold text-white disabled:opacity-70"
       >
-        {status === "loading" ? "Sending…" : "Get a call from Pokkie"}
+        {status === "loading" ? t.form.sending : t.form.submit}
       </button>
 
       {message ? (

@@ -1,6 +1,11 @@
+"use client";
+
+import { useI18n } from "@/lib/i18n";
 import { CallForm } from "./CallForm";
 
 export function FinalCTA() {
+  const { t } = useI18n();
+
   return (
     <section className="pb-24 sm:pb-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
@@ -11,13 +16,10 @@ export function FinalCTA() {
           <div className="relative grid items-center gap-12 lg:grid-cols-2">
             <div>
               <h2 className="font-display text-4xl font-bold tracking-tight text-cream sm:text-5xl lg:text-6xl">
-                Ready to hear
-                <span className="block text-gradient">Pokkie?</span>
+                {t.finalCta.title}
+                <span className="block text-gradient">{t.finalCta.titleAccent}</span>
               </h2>
-              <p className="mt-5 max-w-md text-lg text-blush/90">
-                One call. Your number. Hear how she books for a business like
-                yours.
-              </p>
+              <p className="mt-5 max-w-md text-lg text-blush/90">{t.finalCta.body}</p>
             </div>
             <CallForm id="get-a-call-footer" compact />
           </div>
@@ -28,6 +30,8 @@ export function FinalCTA() {
 }
 
 export function Footer() {
+  const { t } = useI18n();
+
   return (
     <footer className="border-t border-white/5 py-12">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 sm:flex-row sm:items-center sm:justify-between sm:px-8">
@@ -35,19 +39,17 @@ export function Footer() {
           <p className="font-display text-xl font-bold text-cream">
             Pokkie<span className="text-rose-bright">.</span>
           </p>
-          <p className="mt-1 text-xs text-muted">
-            AI receptionist for restaurants, beauty & small businesses.
-          </p>
+          <p className="mt-1 text-xs text-muted">{t.footer.tagline}</p>
         </div>
         <div className="flex flex-wrap gap-5 text-xs text-muted">
           <a href="mailto:hello@pokkie.ai" className="transition hover:text-cream">
             hello@pokkie.ai
           </a>
           <a href="#" className="transition hover:text-cream">
-            Privacy
+            {t.footer.privacy}
           </a>
           <a href="#" className="transition hover:text-cream">
-            Terms
+            {t.footer.terms}
           </a>
           <span>© {new Date().getFullYear()} Pokkie</span>
         </div>

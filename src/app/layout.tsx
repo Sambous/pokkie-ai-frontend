@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Figtree, Syne } from "next/font/google";
+import { Providers } from "@/components/Providers";
 import "./globals.css";
 
 const syne = Syne({
@@ -15,27 +16,31 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "Pokkie — AI receptionist for restaurants, beauty & more",
+  title: "Pokkie — AI-receptionist voor restaurants, beauty & meer",
   description:
-    "Pokkie answers every call, books more appointments, and talks to your customers — for restaurants, beauty salons, hairstylists, and small businesses.",
+    "Pokkie neemt elke call aan, boekt meer afspraken en praat met je klanten — voor restaurants, beauty salons, kappers en kleine bedrijven.",
   metadataBase: new URL("https://pokkie.ai"),
   openGraph: {
     title: "Pokkie.ai",
     description:
-      "AI receptionist that takes more bookings for restaurants, beauty, and local businesses.",
+      "AI-receptionist die meer bookings binnenhaalt voor restaurants, beauty en lokale bedrijven.",
     url: "https://pokkie.ai",
     siteName: "Pokkie",
     type: "website",
+    locale: "nl_NL",
+    alternateLocale: ["en_US"],
   },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="nl"
       className={`${syne.variable} ${figtree.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
