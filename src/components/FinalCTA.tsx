@@ -1,6 +1,9 @@
 "use client";
 
+import Link from "next/link";
+
 import { useI18n } from "@/lib/i18n";
+import { localePath } from "@/lib/site";
 import { CallForm } from "./CallForm";
 
 export function FinalCTA() {
@@ -30,7 +33,7 @@ export function FinalCTA() {
 }
 
 export function Footer() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
 
   return (
     <footer className="border-t border-white/5 py-12">
@@ -42,14 +45,14 @@ export function Footer() {
           <p className="mt-1 text-xs text-muted">{t.footer.tagline}</p>
         </div>
         <div className="flex flex-wrap gap-5 text-xs text-muted">
+          <Link href={localePath(locale, "blog")} className="transition hover:text-cream">
+            {t.nav.blog}
+          </Link>
+          <Link href={localePath(locale, "ai-receptionist")} className="transition hover:text-cream">
+            {t.nav.industries}
+          </Link>
           <a href="mailto:hello@pokkie.ai" className="transition hover:text-cream">
             hello@pokkie.ai
-          </a>
-          <a href="#" className="transition hover:text-cream">
-            {t.footer.privacy}
-          </a>
-          <a href="#" className="transition hover:text-cream">
-            {t.footer.terms}
           </a>
           <span>© {new Date().getFullYear()} Pokkie</span>
         </div>
