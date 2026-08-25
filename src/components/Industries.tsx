@@ -57,7 +57,7 @@ export function Industries() {
             <div className="relative min-h-[220px] sm:min-h-[280px] lg:min-h-[420px]">
               <Image
                 src={current.image}
-                alt=""
+                alt={current.headline}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
