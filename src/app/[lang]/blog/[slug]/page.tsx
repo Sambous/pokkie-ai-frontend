@@ -81,7 +81,7 @@ export default async function BlogPostPage({ params }: PageProps<"/[lang]/blog/[
         ]}
       />
       <Nav />
-      <main className="mx-auto max-w-3xl px-5 pb-24 pt-32 sm:px-8 sm:pt-40">
+      <main className="mx-auto max-w-3xl px-4 pb-20 pt-28 sm:px-8 sm:pb-24 sm:pt-40">
         <Link
           href={localePath(lang, "blog")}
           className="text-sm font-semibold text-rose-bright transition hover:text-cream"
@@ -89,7 +89,7 @@ export default async function BlogPostPage({ params }: PageProps<"/[lang]/blog/[
           ← {t.blog.backToBlog}
         </Link>
 
-        <article className="mt-8">
+        <article className="mt-6 sm:mt-8">
           <header>
             <div className="flex flex-wrap items-center gap-3 text-xs text-muted">
               <time dateTime={post.published}>{formatDate(post.published, lang)}</time>
@@ -98,13 +98,13 @@ export default async function BlogPostPage({ params }: PageProps<"/[lang]/blog/[
                 {post.readingMinutes} {t.blog.readingTime}
               </span>
             </div>
-            <h1 className="font-display mt-4 text-4xl font-bold leading-tight tracking-tight text-cream sm:text-5xl">
+            <h1 className="font-display mt-3 text-3xl font-bold leading-tight tracking-tight text-cream sm:mt-4 sm:text-5xl">
               {article.title}
             </h1>
-            <p className="mt-5 text-lg leading-relaxed text-blush/80">{article.description}</p>
+            <p className="mt-4 text-base leading-relaxed text-blush/80 sm:mt-5 sm:text-lg">{article.description}</p>
           </header>
 
-          <div className="mt-12">
+          <div className="mt-10 sm:mt-12">
             <ArticleBody blocks={article.body} />
           </div>
 

@@ -41,7 +41,7 @@ export function Nav() {
         >
           Pokkie<span className="text-rose-bright">.</span>
         </Link>
-        <nav className="hidden items-center gap-5 text-sm text-blush-deep/90 lg:gap-8 md:flex">
+        <nav className="hidden items-center gap-5 text-sm text-blush-deep/90 lg:flex lg:gap-7">
           <a href={sectionHref("features")} className="transition hover:text-cream">
             {t.nav.features}
           </a>

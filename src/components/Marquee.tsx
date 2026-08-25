@@ -7,17 +7,17 @@ export function Marquee() {
   const loop = [...t.marquee, ...t.marquee];
 
   return (
-    <div className="relative border-y border-white/5 bg-ink-soft/60 py-5 overflow-hidden">
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-ink-soft to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-ink-soft to-transparent" />
-      <div className="marquee-track gap-10 px-4">
+    <div className="relative overflow-hidden border-y border-white/5 bg-ink-soft/60 py-4 sm:py-5">
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-ink-soft to-transparent sm:w-24" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-ink-soft to-transparent sm:w-24" />
+      <div className="marquee-track gap-8 px-4 sm:gap-10">
         {loop.map((item, i) => (
           <span
             key={`${item}-${i}`}
-            className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-blush-deep/70 whitespace-nowrap"
+            className="font-display whitespace-nowrap text-xs font-semibold uppercase tracking-[0.2em] text-blush-deep/70 sm:text-sm"
           >
             {item}
-            <span className="ml-10 text-rose-bright/60">✦</span>
+            <span className="ml-8 text-rose-bright/60 sm:ml-10">✦</span>
           </span>
         ))}
       </div>

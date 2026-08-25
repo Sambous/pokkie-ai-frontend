@@ -53,23 +53,23 @@ export default async function IndustryHub({ params }: PageProps<"/[lang]/ai-rece
         )}
       />
       <Nav />
-      <main className="mx-auto max-w-4xl px-5 pb-24 pt-32 sm:px-8 sm:pt-40">
+      <main className="mx-auto max-w-4xl px-4 pb-20 pt-28 sm:px-8 sm:pb-24 sm:pt-40">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-rose-bright">
           {t.industryPages.eyebrow}
         </p>
-        <h1 className="font-display mt-4 text-4xl font-bold tracking-tight text-cream sm:text-5xl">
+        <h1 className="font-display mt-3 text-3xl font-bold tracking-tight text-cream sm:mt-4 sm:text-5xl">
           {t.industryPages.title}
         </h1>
-        <p className="mt-5 max-w-2xl text-lg text-blush/80">{t.industryPages.intro}</p>
+        <p className="mt-4 max-w-2xl text-base text-blush/80 sm:mt-5 sm:text-lg">{t.industryPages.intro}</p>
 
-        <div className="mt-14 grid gap-4 sm:grid-cols-2">
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2">
           {INDUSTRY_PAGES.map((industry) => {
             const page = industry.translations[lang];
             return (
               <Link
                 key={industry.id}
                 href={localePath(lang, `ai-receptionist/${page.slug}`)}
-                className="group rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-rose-bright/40 hover:bg-white/[0.06]"
+                className="group rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-rose-bright/40 hover:bg-white/[0.06] sm:rounded-3xl sm:p-6"
               >
                 <span aria-hidden className="text-2xl">
                   {industry.glyph}
