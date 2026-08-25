@@ -4,7 +4,7 @@ const dictionaries = {
   nl: {
     metaTitle: "Pokkie — AI-receptionist voor restaurants, beauty & meer",
     metaDescription:
-      "Pokkie neemt elke call aan, boekt meer afspraken en praat met je klanten — voor restaurants, beauty salons, kappers en kleine bedrijven.",
+      "Pokkie neemt elke call aan, boekt meer afspraken en praat met je klanten — voor restaurants, beauty salons, kappers en MKB.",
     nav: {
       features: "Voordelen",
       industries: "Branches",
@@ -24,7 +24,7 @@ const dictionaries = {
         "kappers",
         "spa’s",
         "klinieken",
-        "kleine bedrijven",
+        "MKB",
       ],
       srAudiences: "restaurants, beauty salons, kappers en meer",
       support:
@@ -66,7 +66,7 @@ const dictionaries = {
       title: "Receptie-energie.",
       titleAccent: "Geen gemiste belletjes.",
       intro:
-        "Gebouwd voor teams die op de telefoon leven — restaurants, salons, klinieken en lokale winkels die geen booking kunnen missen.",
+        "Gebouwd voor teams die op de telefoon leven — restaurants, salons, klinieken en lokale winkels die geen bookingen kunnen missen.",
       items: [
         {
           title: "24/7 bereikbaar",
@@ -78,12 +78,12 @@ const dictionaries = {
         },
         {
           title: "Klinkt menselijk",
-          body: "Natuurlijke toon, geen robotmenu’s. Gasten stellen vragen, wijzigen bookings en voelen zich geholpen.",
+          body: "Natuurlijke toon, geen robotmenu’s. Gasten stellen vragen, wijzigen bookingen en voelen zich geholpen.",
         },
       ],
     },
     industries: {
-      title: "Voor bedrijven die van bookings leven",
+      title: "Voor bedrijven die van bookingen leven",
       intro:
         "Eén Pokkie, jouw tone of voice — of je nou serveert, knipt of de zaak runt.",
       items: [
@@ -111,13 +111,13 @@ const dictionaries = {
             "Bevestig afspraken zodat no-shows dalen",
           ],
           stat: "+18%",
-          statLabel: "gem. meer bookings gevangen",
+          statLabel: "gem. meer bookingen gevangen",
           image:
             "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80",
         },
         {
           id: "smb",
-          label: "Kleine bedrijven",
+          label: "MKB",
           headline: "Altijd open voor de call die telt",
           points: [
             "Kwalificeer leads, boekt afspraken en routeert urgente calls",
@@ -127,7 +127,7 @@ const dictionaries = {
           stat: "+20%",
           statLabel: "gem. meer vragen beantwoord",
           image:
-            "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&w=1600&q=80",
+            "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=1600&q=80",
         },
       ],
     },
@@ -144,7 +144,7 @@ const dictionaries = {
           body: "Diensten, openingstijden, toon, boekingsregels. Pokkie leert hoe jouw zaak praat.",
         },
         {
-          title: "Meer bookings",
+          title: "Meer bookingen",
           body: "Zij neemt op, boekt en vat samen. Jij blijft op de vloer waar het gebeurt.",
         },
       ],
@@ -164,7 +164,7 @@ const dictionaries = {
         {
           id: "googleCalendar",
           name: "Google Calendar",
-          body: "Afspraken verschijnen in de agenda die je al deelt — geen extra bookingstool om bij te houden.",
+          body: "Afspraken verschijnen in de agenda die je al deelt — geen extra boekingstool om bij te houden.",
         },
         {
           id: "whatsapp",
@@ -194,7 +194,7 @@ const dictionaries = {
       ],
     },
     testimonials: {
-      title: "Geliefd waar bookings tellen",
+      title: "Geliefd waar bookingen tellen",
       items: [
         {
           quote:
@@ -221,7 +221,7 @@ const dictionaries = {
       items: [
         {
           q: "Wat is Pokkie?",
-          a: "Pokkie is een AI-receptionist voor restaurants, beauty salons, kappers en kleine bedrijven. Ze neemt calls aan, boekt afspraken en praat met klanten zodat je geen booking mist.",
+          a: "Pokkie is een AI-receptionist voor restaurants, beauty salons, kappers en MKB. Ze neemt calls aan, boekt afspraken en praat met klanten zodat je geen booking mist.",
         },
         {
           q: "Klinkt ze robotachtig?",
@@ -233,7 +233,7 @@ const dictionaries = {
         },
         {
           q: "Moeten we van systeem wisselen?",
-          a: "Nee. Pokkie heeft plugins voor onder meer Zenchef, Google Calendar en WhatsApp, zodat bookings en berichten landen in de apps die al in je zaak staan.",
+          a: "Nee. Pokkie heeft plugins voor onder meer Zenchef, Google Calendar en WhatsApp, zodat bookingen en berichten landen in de apps die al in je zaak staan.",
         },
       ],
     },
@@ -243,7 +243,7 @@ const dictionaries = {
       body: "Eén call. Jouw nummer. Hoor hoe ze boekt voor een zaak zoals die van jou.",
     },
     footer: {
-      tagline: "AI-receptionist voor restaurants, beauty & kleine bedrijven.",
+      tagline: "AI-receptionist voor restaurants, beauty & MKB.",
       privacy: "Privacy",
       terms: "Voorwaarden",
     },
@@ -254,7 +254,7 @@ const dictionaries = {
         "Praktische gidsen over telefonische bereikbaarheid, afspraken inplannen en wat gemiste oproepen echt kosten.",
       metaTitle: "Blog — Pokkie",
       metaDescription:
-        "Praktische gidsen over telefonische bereikbaarheid, afspraken inplannen en wat gemiste oproepen kosten voor restaurants, salons en kleine bedrijven.",
+        "Praktische gidsen over telefonische bereikbaarheid, afspraken inplannen en wat gemiste oproepen kosten voor restaurants, salons en MKB.",
       readingTime: "min lezen",
       readMore: "Lees verder",
       backToBlog: "Terug naar blog",
@@ -276,7 +276,7 @@ const dictionaries = {
   en: {
     metaTitle: "Pokkie — AI receptionist for restaurants, beauty & more",
     metaDescription:
-      "Pokkie answers every call, books more appointments, and talks to your customers — for restaurants, beauty salons, hairstylists, and small businesses.",
+      "Pokkie answers every call, books more appointments, and talks to your customers — for restaurants, beauty salons, hairstylists, and SMBs.",
     nav: {
       features: "Features",
       industries: "Industries",
@@ -296,7 +296,7 @@ const dictionaries = {
         "hairstylists",
         "spas",
         "clinics",
-        "small businesses",
+        "SMBs",
       ],
       srAudiences: "restaurants, beauty salons, hairstylists, and more",
       support:
@@ -389,7 +389,7 @@ const dictionaries = {
         },
         {
           id: "smb",
-          label: "Small businesses",
+          label: "SMB",
           headline: "Always open for the call that pays the rent",
           points: [
             "Qualify leads, book appointments, and route urgent calls",
@@ -399,7 +399,7 @@ const dictionaries = {
           stat: "+20%",
           statLabel: "avg. more enquiries answered",
           image:
-            "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&w=1600&q=80",
+            "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=1600&q=80",
         },
       ],
     },
@@ -493,7 +493,7 @@ const dictionaries = {
       items: [
         {
           q: "What is Pokkie?",
-          a: "Pokkie is an AI receptionist for restaurants, beauty salons, hairstylists, and small businesses. She answers calls, books appointments, and talks to customers so you never miss a booking.",
+          a: "Pokkie is an AI receptionist for restaurants, beauty salons, hairstylists, and SMBs. She answers calls, books appointments, and talks to customers so you never miss a booking.",
         },
         {
           q: "Does she sound robotic?",
@@ -515,7 +515,7 @@ const dictionaries = {
       body: "One call. Your number. Hear how she books for a business like yours.",
     },
     footer: {
-      tagline: "AI receptionist for restaurants, beauty & small businesses.",
+      tagline: "AI receptionist for restaurants, beauty & SMBs.",
       privacy: "Privacy",
       terms: "Terms",
     },
@@ -526,7 +526,7 @@ const dictionaries = {
         "Practical guides on phone availability, appointment booking, and what missed calls actually cost.",
       metaTitle: "Blog — Pokkie",
       metaDescription:
-        "Practical guides on phone availability, appointment booking, and what missed calls cost restaurants, salons, and small businesses.",
+        "Practical guides on phone availability, appointment booking, and what missed calls cost restaurants, salons, and SMBs.",
       readingTime: "min read",
       readMore: "Read more",
       backToBlog: "Back to blog",

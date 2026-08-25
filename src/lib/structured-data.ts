@@ -32,7 +32,7 @@ export function organizationSchema(): JsonLd {
     email: CONTACT_EMAIL,
     logo: absoluteUrl("/opengraph-image"),
     description:
-      "Pokkie is an AI receptionist that answers every call, books appointments, and talks to customers for restaurants, beauty salons, and small businesses.",
+      "Pokkie is an AI receptionist that answers every call, books appointments, and talks to customers for restaurants, beauty salons, and SMBs.",
     areaServed: "NL",
   };
 }
