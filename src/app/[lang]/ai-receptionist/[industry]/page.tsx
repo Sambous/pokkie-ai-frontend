@@ -70,7 +70,7 @@ export default async function IndustryPageView({
         ]}
       />
       <Nav />
-      <main className="mx-auto max-w-3xl px-5 pb-24 pt-32 sm:px-8 sm:pt-40">
+      <main className="mx-auto max-w-3xl px-4 pb-20 pt-28 sm:px-8 sm:pb-24 sm:pt-40">
         <Link
           href={localePath(lang, "ai-receptionist")}
           className="text-sm font-semibold text-rose-bright transition hover:text-cream"
@@ -78,29 +78,29 @@ export default async function IndustryPageView({
           ← {t.industryPages.viewAll}
         </Link>
 
-        <header className="mt-8">
+        <header className="mt-6 sm:mt-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-rose-bright">
             {content.label}
           </p>
-          <h1 className="font-display mt-4 text-4xl font-bold leading-tight tracking-tight text-cream sm:text-5xl">
+          <h1 className="font-display mt-3 text-3xl font-bold leading-tight tracking-tight text-cream sm:mt-4 sm:text-5xl">
             {content.heroHeadline}
           </h1>
-          <p className="mt-5 text-lg leading-relaxed text-blush/80">{content.heroSubline}</p>
+          <p className="mt-4 text-base leading-relaxed text-blush/80 sm:mt-5 sm:text-lg">{content.heroSubline}</p>
           <a
             href={`${localePath(lang)}#get-a-call`}
-            className="btn-primary mt-8 inline-block rounded-full px-6 py-3 text-sm font-semibold text-white"
+            className="btn-primary mt-6 inline-flex w-full items-center justify-center rounded-full px-6 py-3 text-sm font-semibold text-white sm:mt-8 sm:inline-block sm:w-auto"
           >
             {t.nav.getCall}
           </a>
         </header>
 
-        <section className="mt-14 rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-8">
+        <section className="mt-10 rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:mt-14 sm:rounded-3xl sm:p-8">
           <h2 className="font-display text-lg font-bold tracking-tight text-cream">
             {t.industryPages.outcomesTitle}
           </h2>
           <ul className="mt-5 flex flex-col gap-3">
             {content.outcomes.map((outcome) => (
-              <li key={outcome} className="flex gap-3 text-base leading-relaxed text-blush/85">
+              <li key={outcome} className="flex gap-3 text-sm leading-relaxed text-blush/85 sm:text-base">
                 <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-bright" />
                 {outcome}
               </li>
@@ -108,18 +108,18 @@ export default async function IndustryPageView({
           </ul>
         </section>
 
-        <div className="mt-14">
+        <div className="mt-10 sm:mt-14">
           <ArticleBody blocks={content.body} />
         </div>
 
         {content.faq ? <ContentFaq title={t.blog.faqTitle} items={content.faq} /> : null}
 
         {/* Sibling links keep crawl paths open across the industry set. */}
-        <section className="mt-16 border-t border-white/10 pt-10">
+        <section className="mt-12 border-t border-white/10 pt-8 sm:mt-16 sm:pt-10">
           <h2 className="font-display text-xl font-bold tracking-tight text-cream">
             {t.industryPages.viewAll}
           </h2>
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-5 flex flex-wrap gap-2 sm:mt-6 sm:gap-3">
             {siblings.map((entry) => {
               const sibling = entry.translations[lang];
               return (

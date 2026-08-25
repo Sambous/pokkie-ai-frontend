@@ -47,23 +47,23 @@ export default async function BlogIndex({ params }: PageProps<"/[lang]/blog">) {
         )}
       />
       <Nav />
-      <main className="mx-auto max-w-4xl px-5 pb-24 pt-32 sm:px-8 sm:pt-40">
+      <main className="mx-auto max-w-4xl px-4 pb-20 pt-28 sm:px-8 sm:pb-24 sm:pt-40">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-rose-bright">
           {t.blog.eyebrow}
         </p>
-        <h1 className="font-display mt-4 text-4xl font-bold tracking-tight text-cream sm:text-5xl">
+        <h1 className="font-display mt-3 text-3xl font-bold tracking-tight text-cream sm:mt-4 sm:text-5xl">
           {t.blog.title}
         </h1>
-        <p className="mt-5 max-w-2xl text-lg text-blush/80">{t.blog.intro}</p>
+        <p className="mt-4 max-w-2xl text-base text-blush/80 sm:mt-5 sm:text-lg">{t.blog.intro}</p>
 
-        <div className="mt-14 flex flex-col gap-4">
+        <div className="mt-10 flex flex-col gap-4 sm:mt-14">
           {posts.map((post) => {
             const article = post.translations[lang];
             return (
               <Link
                 key={post.id}
                 href={localePath(lang, `blog/${article.slug}`)}
-                className="group rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-rose-bright/40 hover:bg-white/[0.06] sm:p-8"
+                className="group rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-rose-bright/40 hover:bg-white/[0.06] sm:rounded-3xl sm:p-8"
               >
                 <div className="flex flex-wrap items-center gap-3 text-xs text-muted">
                   <time dateTime={post.published}>
@@ -74,13 +74,13 @@ export default async function BlogIndex({ params }: PageProps<"/[lang]/blog">) {
                     {post.readingMinutes} {t.blog.readingTime}
                   </span>
                 </div>
-                <h2 className="font-display mt-3 text-2xl font-bold tracking-tight text-cream transition group-hover:text-rose-bright sm:text-3xl">
+                <h2 className="font-display mt-3 text-xl font-bold tracking-tight text-cream transition group-hover:text-rose-bright sm:text-3xl">
                   {article.title}
                 </h2>
-                <p className="mt-3 text-base leading-relaxed text-blush/75">
+                <p className="mt-3 text-sm leading-relaxed text-blush/75 sm:text-base">
                   {article.description}
                 </p>
-                <span className="mt-5 inline-block text-sm font-semibold text-rose-bright">
+                <span className="mt-4 inline-block text-sm font-semibold text-rose-bright sm:mt-5">
                   {t.blog.readMore} →
                 </span>
               </Link>

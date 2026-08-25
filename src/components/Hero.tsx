@@ -24,9 +24,12 @@ function RotatingAudience({
   sr: string;
 }) {
   return (
-    <span className="relative mt-4 inline-flex min-h-[1.25em] min-w-[12ch] items-center sm:min-w-[14ch]">
-      <span aria-hidden className="audience-frame absolute -inset-x-3 -inset-y-1.5 rounded-2xl" />
-      <span className="relative overflow-hidden px-4 py-1.5">
+    <span className="relative mt-3 inline-flex max-w-full min-h-[1.25em] items-center sm:mt-4">
+      <span
+        aria-hidden
+        className="audience-frame absolute inset-y-0 -inset-x-2 rounded-xl sm:-inset-x-3 sm:rounded-2xl sm:-inset-y-1.5"
+      />
+      <span className="relative max-w-full overflow-hidden px-2.5 py-1 sm:px-4 sm:py-1.5">
         <AnimatePresence mode="wait">
           <motion.span
             key={labels[index]}
@@ -34,7 +37,7 @@ function RotatingAudience({
             animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
             exit={{ y: "-80%", opacity: 0, filter: "blur(6px)" }}
             transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-            className="text-gradient inline-block whitespace-nowrap"
+            className="text-gradient inline-block max-w-full break-words sm:whitespace-nowrap"
           >
             {labels[index]}
           </motion.span>
@@ -62,7 +65,7 @@ export function Hero() {
   }, [labels.length]);
 
   return (
-    <section className="hero-mesh relative min-h-[100svh] overflow-hidden pt-16">
+    <section className="hero-mesh relative min-h-[100svh] overflow-x-clip overflow-y-hidden pt-14 sm:pt-16">
       <div className="pointer-events-none absolute inset-0">
         <AnimatePresence mode="sync">
           <motion.div
@@ -88,12 +91,12 @@ export function Hero() {
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink to-transparent" />
       </div>
 
-      <div className="relative mx-auto flex min-h-[calc(100svh-4rem)] max-w-6xl flex-col justify-center px-5 pb-28 pt-20 sm:px-8 lg:pb-36 lg:pt-24">
+      <div className="relative mx-auto flex min-h-[calc(100svh-3.5rem)] w-full max-w-6xl flex-col justify-center px-4 pb-20 pt-16 sm:min-h-[calc(100svh-4rem)] sm:px-8 sm:pb-28 sm:pt-20 lg:pb-36 lg:pt-24">
         <motion.p
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55 }}
-          className="font-display text-5xl font-extrabold tracking-tight text-cream sm:text-6xl lg:text-7xl xl:text-8xl"
+          className="font-display text-[2.5rem] font-extrabold leading-none tracking-tight text-cream sm:text-6xl lg:text-7xl xl:text-8xl"
         >
           Pokkie<span className="text-rose-bright">.</span>
         </motion.p>
@@ -102,7 +105,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-6 max-w-3xl font-display text-3xl font-bold leading-[1.12] tracking-tight text-cream sm:text-4xl lg:text-5xl"
+          className="mt-5 max-w-3xl font-display text-[1.65rem] font-bold leading-[1.15] tracking-tight text-cream sm:mt-6 sm:text-4xl lg:text-5xl"
         >
           <span className="block text-blush-deep/95">{t.hero.for}</span>
           <RotatingAudience index={index} labels={labels} sr={t.hero.srAudiences} />
@@ -112,7 +115,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.22 }}
-          className="mt-7 max-w-lg text-base leading-relaxed text-blush/85 sm:text-lg"
+          className="mt-5 max-w-lg text-[0.95rem] leading-relaxed text-blush/85 sm:mt-7 sm:text-lg"
         >
           {t.hero.support}
         </motion.p>
@@ -121,17 +124,17 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.34 }}
-          className="mt-10 flex flex-wrap items-center gap-4"
+          className="mt-8 flex w-full max-w-md flex-col gap-3 sm:mt-10 sm:max-w-none sm:flex-row sm:flex-wrap sm:items-center sm:gap-4"
         >
           <a
             href="#get-a-call"
-            className="btn-primary inline-flex rounded-full px-8 py-4 text-sm font-semibold text-white"
+            className="btn-primary inline-flex w-full items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold text-white sm:w-auto sm:px-8 sm:py-4"
           >
             {t.hero.cta}
           </a>
           <a
             href="#how"
-            className="rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-medium text-blush backdrop-blur-sm transition hover:border-white/30 hover:bg-white/10 hover:text-cream"
+            className="inline-flex w-full items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-medium text-blush backdrop-blur-sm transition hover:border-white/30 hover:bg-white/10 hover:text-cream sm:w-auto"
           >
             {t.hero.secondary}
           </a>
@@ -141,7 +144,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="mt-14 flex gap-2"
+          className="mt-10 flex gap-2 sm:mt-14"
           aria-hidden
         >
           {slideImages.map((src, i) => (

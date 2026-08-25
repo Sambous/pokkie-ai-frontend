@@ -8,9 +8,9 @@ export function CallSection() {
   const { t } = useI18n();
 
   return (
-    <section className="relative py-20 sm:py-28">
-      <div className="pointer-events-none absolute left-1/2 top-0 h-72 w-[36rem] -translate-x-1/2 rounded-full bg-rose/20 blur-[100px]" />
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2">
+    <section className="relative overflow-x-clip py-16 sm:py-28">
+      <div className="pointer-events-none absolute left-1/2 top-0 h-56 w-72 -translate-x-1/2 rounded-full bg-rose/20 blur-[80px] sm:h-72 sm:w-[36rem] sm:blur-[100px]" />
+      <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 sm:gap-12 sm:px-8 lg:grid-cols-2">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
