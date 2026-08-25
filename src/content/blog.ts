@@ -217,7 +217,7 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
         faq: [
           {
-            q: "How many calls does an average small business miss?",
+            q: "How many calls does an average SMB miss?",
             a: "It varies by industry, but businesses whose staff are serving customers during opening hours typically miss a meaningful share of inbound calls — especially during peak hours and outside opening times. Track one week in your phone log to get your own number.",
           },
           {

@@ -276,7 +276,7 @@ const dictionaries = {
   en: {
     metaTitle: "Pokkie — AI receptionist for restaurants, beauty & more",
     metaDescription:
-      "Pokkie answers every call, books more appointments, and talks to your customers — for restaurants, beauty salons, hairstylists, and small businesses.",
+      "Pokkie answers every call, books more appointments, and talks to your customers — for restaurants, beauty salons, hairstylists, and SMBs.",
     nav: {
       features: "Features",
       industries: "Industries",
@@ -296,7 +296,7 @@ const dictionaries = {
         "hairstylists",
         "spas",
         "clinics",
-        "small businesses",
+        "SMBs",
       ],
       srAudiences: "restaurants, beauty salons, hairstylists, and more",
       support:
@@ -389,7 +389,7 @@ const dictionaries = {
         },
         {
           id: "smb",
-          label: "Small businesses",
+          label: "SMB",
           headline: "Always open for the call that pays the rent",
           points: [
             "Qualify leads, book appointments, and route urgent calls",
@@ -493,7 +493,7 @@ const dictionaries = {
       items: [
         {
           q: "What is Pokkie?",
-          a: "Pokkie is an AI receptionist for restaurants, beauty salons, hairstylists, and small businesses. She answers calls, books appointments, and talks to customers so you never miss a booking.",
+          a: "Pokkie is an AI receptionist for restaurants, beauty salons, hairstylists, and SMBs. She answers calls, books appointments, and talks to customers so you never miss a booking.",
         },
         {
           q: "Does she sound robotic?",
@@ -515,7 +515,7 @@ const dictionaries = {
       body: "One call. Your number. Hear how she books for a business like yours.",
     },
     footer: {
-      tagline: "AI receptionist for restaurants, beauty & small businesses.",
+      tagline: "AI receptionist for restaurants, beauty & SMBs.",
       privacy: "Privacy",
       terms: "Terms",
     },
@@ -526,7 +526,7 @@ const dictionaries = {
         "Practical guides on phone availability, appointment booking, and what missed calls actually cost.",
       metaTitle: "Blog — Pokkie",
       metaDescription:
-        "Practical guides on phone availability, appointment booking, and what missed calls cost restaurants, salons, and small businesses.",
+        "Practical guides on phone availability, appointment booking, and what missed calls cost restaurants, salons, and SMBs.",
       readingTime: "min read",
       readMore: "Read more",
       backToBlog: "Back to blog",
