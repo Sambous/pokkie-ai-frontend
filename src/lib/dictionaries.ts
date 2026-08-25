@@ -4,7 +4,7 @@ const dictionaries = {
   nl: {
     metaTitle: "Pokkie — AI-receptionist voor restaurants, beauty & meer",
     metaDescription:
-      "Pokkie neemt elke call aan, boekt meer afspraken en praat met je klanten — voor restaurants, beauty salons, kappers en kleine bedrijven.",
+      "Pokkie neemt elke call aan, boekt meer afspraken en praat met je klanten — voor restaurants, beauty salons, kappers en MKB.",
     nav: {
       features: "Voordelen",
       industries: "Branches",
@@ -24,7 +24,7 @@ const dictionaries = {
         "kappers",
         "spa’s",
         "klinieken",
-        "kleine bedrijven",
+        "MKB",
       ],
       srAudiences: "restaurants, beauty salons, kappers en meer",
       support:
@@ -117,7 +117,7 @@ const dictionaries = {
         },
         {
           id: "smb",
-          label: "Kleine bedrijven",
+          label: "MKB",
           headline: "Altijd open voor de call die telt",
           points: [
             "Kwalificeer leads, boekt afspraken en routeert urgente calls",
@@ -221,7 +221,7 @@ const dictionaries = {
       items: [
         {
           q: "Wat is Pokkie?",
-          a: "Pokkie is een AI-receptionist voor restaurants, beauty salons, kappers en kleine bedrijven. Ze neemt calls aan, boekt afspraken en praat met klanten zodat je geen booking mist.",
+          a: "Pokkie is een AI-receptionist voor restaurants, beauty salons, kappers en MKB. Ze neemt calls aan, boekt afspraken en praat met klanten zodat je geen booking mist.",
         },
         {
           q: "Klinkt ze robotachtig?",
@@ -243,7 +243,7 @@ const dictionaries = {
       body: "Eén call. Jouw nummer. Hoor hoe ze boekt voor een zaak zoals die van jou.",
     },
     footer: {
-      tagline: "AI-receptionist voor restaurants, beauty & kleine bedrijven.",
+      tagline: "AI-receptionist voor restaurants, beauty & MKB.",
       privacy: "Privacy",
       terms: "Voorwaarden",
     },
@@ -254,7 +254,7 @@ const dictionaries = {
         "Praktische gidsen over telefonische bereikbaarheid, afspraken inplannen en wat gemiste oproepen echt kosten.",
       metaTitle: "Blog — Pokkie",
       metaDescription:
-        "Praktische gidsen over telefonische bereikbaarheid, afspraken inplannen en wat gemiste oproepen kosten voor restaurants, salons en kleine bedrijven.",
+        "Praktische gidsen over telefonische bereikbaarheid, afspraken inplannen en wat gemiste oproepen kosten voor restaurants, salons en MKB.",
       readingTime: "min lezen",
       readMore: "Lees verder",
       backToBlog: "Terug naar blog",
