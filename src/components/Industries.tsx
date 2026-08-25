@@ -12,8 +12,8 @@ export function Industries() {
   const current = industries[active] ?? industries[0];
 
   return (
-    <section id="industries" className="scroll-mt-20 py-24 sm:py-32">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+    <section id="industries" className="scroll-mt-20 overflow-x-clip py-16 sm:py-32">
+      <div className="mx-auto max-w-6xl px-4 sm:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -23,18 +23,18 @@ export function Industries() {
           <h2 className="font-display text-3xl font-bold tracking-tight text-cream sm:text-5xl">
             {t.industries.title}
           </h2>
-          <p className="mt-4 max-w-xl text-lg text-blush-deep/85">
+          <p className="mt-4 max-w-xl text-base text-blush-deep/85 sm:text-lg">
             {t.industries.intro}
           </p>
         </motion.div>
 
-        <div className="mt-10 flex flex-wrap gap-2">
+        <div className="mt-8 flex flex-wrap gap-2 sm:mt-10">
           {industries.map((ind, i) => (
             <button
               key={ind.id}
               type="button"
               onClick={() => setActive(i)}
-              className={`rounded-full px-5 py-2.5 text-sm font-semibold transition ${
+              className={`rounded-full px-4 py-2 text-sm font-semibold transition sm:px-5 sm:py-2.5 ${
                 active === i
                   ? "bg-rose text-white shadow-lg shadow-rose/30"
                   : "border border-white/10 bg-white/5 text-blush-deep hover:border-white/20 hover:text-cream"
@@ -52,9 +52,9 @@ export function Industries() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.4 }}
-            className="mt-8 grid overflow-hidden rounded-[2rem] border border-white/10 lg:grid-cols-2"
+            className="mt-8 grid overflow-hidden rounded-[1.5rem] border border-white/10 sm:rounded-[2rem] lg:grid-cols-2"
           >
-            <div className="relative min-h-[280px] lg:min-h-[420px]">
+            <div className="relative min-h-[220px] sm:min-h-[280px] lg:min-h-[420px]">
               <Image
                 src={current.image}
                 alt=""
@@ -64,8 +64,8 @@ export function Industries() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-ink/40" />
             </div>
-            <div className="gloss-panel flex flex-col justify-center rounded-none border-0 p-8 sm:p-10">
-              <h3 className="font-display text-2xl font-semibold text-cream sm:text-3xl">
+            <div className="gloss-panel flex flex-col justify-center rounded-none border-0 p-6 sm:p-10">
+              <h3 className="font-display text-xl font-semibold text-cream sm:text-3xl">
                 {current.headline}
               </h3>
               <ul className="mt-6 space-y-3">

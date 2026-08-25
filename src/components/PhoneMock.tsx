@@ -7,8 +7,8 @@ export function PhoneMock() {
   const { t } = useI18n();
 
   return (
-    <section className="py-16 sm:py-24">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2">
+    <section className="overflow-x-clip py-16 sm:py-24">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:gap-12 sm:px-8 lg:grid-cols-2">
         <motion.div
           initial={{ opacity: 0, x: -24 }}
           whileInView={{ opacity: 1, x: 0 }}

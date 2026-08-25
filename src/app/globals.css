@@ -30,13 +30,15 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   background: var(--ink);
   color: var(--cream);
   font-family: var(--font-figtree), system-ui, sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
+  width: 100%;
 }
 
 ::selection {

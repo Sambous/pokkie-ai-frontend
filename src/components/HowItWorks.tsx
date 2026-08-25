@@ -7,8 +7,8 @@ export function HowItWorks() {
   const { t } = useI18n();
 
   return (
-    <section id="how" className="scroll-mt-20 border-t border-white/5 py-24 sm:py-32">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+    <section id="how" className="scroll-mt-20 overflow-x-clip border-t border-white/5 py-16 sm:py-32">
+      <div className="mx-auto max-w-6xl px-4 sm:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -17,9 +17,9 @@ export function HowItWorks() {
         >
           {t.how.title}
         </motion.h2>
-        <p className="mt-4 max-w-lg text-lg text-blush-deep/85">{t.how.intro}</p>
+        <p className="mt-4 max-w-lg text-base text-blush-deep/85 sm:text-lg">{t.how.intro}</p>
 
-        <ol className="mt-16 grid gap-8 md:grid-cols-3">
+        <ol className="mt-10 grid gap-8 sm:mt-16 md:grid-cols-3">
           {t.how.steps.map((step, i) => (
             <motion.li
               key={step.title}
@@ -29,10 +29,10 @@ export function HowItWorks() {
               transition={{ delay: i * 0.1, duration: 0.5 }}
               className="relative"
             >
-              <span className="font-display text-7xl font-extrabold leading-none text-white/[0.05]">
+              <span className="font-display text-6xl font-extrabold leading-none text-white/[0.05] sm:text-7xl">
                 {i + 1}
               </span>
-              <h3 className="-mt-10 font-display text-xl font-semibold text-cream">
+              <h3 className="-mt-8 font-display text-xl font-semibold text-cream sm:-mt-10">
                 {step.title}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-blush-deep/80">
