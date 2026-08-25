@@ -9,12 +9,12 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="scroll-mt-20 py-24 sm:py-28">
-      <div className="mx-auto max-w-3xl px-5 sm:px-8">
+    <section id="faq" className="scroll-mt-20 overflow-x-clip py-16 sm:py-28">
+      <div className="mx-auto max-w-3xl px-4 sm:px-8">
         <h2 className="font-display text-3xl font-bold tracking-tight text-cream sm:text-4xl">
           {t.faq.title}
         </h2>
-        <div className="mt-10 divide-y divide-white/10 border-y border-white/10">
+        <div className="mt-8 divide-y divide-white/10 border-y border-white/10 sm:mt-10">
           {t.faq.items.map((item, i) => {
             const isOpen = open === i;
             return (
