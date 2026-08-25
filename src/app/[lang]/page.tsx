@@ -11,6 +11,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Marquee } from "@/components/Marquee";
 import { Nav } from "@/components/Nav";
 import { PhoneMock } from "@/components/PhoneMock";
+import { Plugins } from "@/components/Plugins";
 import { Testimonials } from "@/components/Testimonials";
 import { getDictionary } from "@/lib/dictionaries";
 import { isLocale } from "@/lib/site";
@@ -40,6 +41,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <Features />
         <Industries />
         <HowItWorks />
+        <Plugins />
         <PhoneMock />
         <Testimonials />
         <FAQ />

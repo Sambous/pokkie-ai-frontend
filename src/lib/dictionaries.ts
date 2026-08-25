@@ -8,10 +8,12 @@ const dictionaries = {
     nav: {
       features: "Voordelen",
       industries: "Branches",
+      plugins: "Plugins",
       how: "Hoe het werkt",
       faq: "FAQ",
       blog: "Blog",
       getCall: "Laat Pokkie bellen",
+      getCallShort: "Bel me",
       home: "Home",
     },
     hero: {
@@ -147,6 +149,31 @@ const dictionaries = {
         },
       ],
     },
+    plugins: {
+      eyebrow: "Plugins",
+      title: "Werkt met de apps",
+      titleAccent: "die je al hebt.",
+      intro:
+        "Geen nieuw systeem dat niemand opent. Pokkie koppelt aan de tools die al in je zaak draaien — reserveringen, agenda en berichten blijven waar je team al werkt.",
+      items: [
+        {
+          id: "zenchef",
+          name: "Zenchef",
+          body: "Reserveringen landen in Zenchef, zodat de vloer dezelfde tafelplanning ziet als altijd.",
+        },
+        {
+          id: "googleCalendar",
+          name: "Google Calendar",
+          body: "Afspraken verschijnen in de agenda die je al deelt — geen extra bookingstool om bij te houden.",
+        },
+        {
+          id: "whatsapp",
+          name: "WhatsApp",
+          body: "Bevestigingen en follow-ups via WhatsApp, naast de telefoon. Klanten blijven in het kanaal dat ze kennen.",
+        },
+      ],
+      more: "En meer — agenda’s, reserveringssystemen en messaging-apps. Pokkie voegt zich naar wat er al staat.",
+    },
     phone: {
       title: "Ontmoet Pokkie aan de lijn",
       body: "Natuurlijke beurten, boekingslogica en een stem die bij jouw merk past — geen callcenterscript.",
@@ -204,6 +231,10 @@ const dictionaries = {
           q: "Hoe snel zijn we live?",
           a: "De meeste bedrijven schakelen door, zetten diensten en tijden klaar, en nemen binnen een dag calls aan. Geen zware integratie nodig om te proberen.",
         },
+        {
+          q: "Moeten we van systeem wisselen?",
+          a: "Nee. Pokkie heeft plugins voor onder meer Zenchef, Google Calendar en WhatsApp, zodat bookings en berichten landen in de apps die al in je zaak staan.",
+        },
       ],
     },
     finalCta: {
@@ -249,10 +280,12 @@ const dictionaries = {
     nav: {
       features: "Features",
       industries: "Industries",
+      plugins: "Plugins",
       how: "How it works",
       faq: "FAQ",
       blog: "Blog",
       getCall: "Get a call",
+      getCallShort: "Call me",
       home: "Home",
     },
     hero: {
@@ -388,6 +421,31 @@ const dictionaries = {
         },
       ],
     },
+    plugins: {
+      eyebrow: "Plugins",
+      title: "Works with the apps",
+      titleAccent: "you already run.",
+      intro:
+        "No new system nobody opens. Pokkie plugs into the tools already in place — reservations, calendars, and messages land where your team already works.",
+      items: [
+        {
+          id: "zenchef",
+          name: "Zenchef",
+          body: "Reservations land in Zenchef, so the floor sees the same table plan they already trust.",
+        },
+        {
+          id: "googleCalendar",
+          name: "Google Calendar",
+          body: "Appointments show up in the calendar you already share — no extra booking tool to babysit.",
+        },
+        {
+          id: "whatsapp",
+          name: "WhatsApp",
+          body: "Confirmations and follow-ups over WhatsApp, alongside the phone. Guests stay in the channel they already use.",
+        },
+      ],
+      more: "And more — calendars, reservation systems, and messaging apps. Pokkie fits around what you already have.",
+    },
     phone: {
       title: "Meet Pokkie on the line",
       body: "Natural turn-taking, booking logic, and a voice that fits your brand — not a call centre script.",
@@ -444,6 +502,10 @@ const dictionaries = {
         {
           q: "How fast can we go live?",
           a: "Most businesses forward their number, set services and hours, and start taking calls within a day. No heavy integration required to try her.",
+        },
+        {
+          q: "Do we have to switch systems?",
+          a: "No. Pokkie has plugins for Zenchef, Google Calendar, WhatsApp and more, so bookings and messages land in the apps you already use.",
         },
       ],
     },

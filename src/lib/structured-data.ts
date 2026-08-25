@@ -61,6 +61,13 @@ export function softwareApplicationSchema(locale: Locale, description: string): 
     url: absoluteUrl(localePath(locale)),
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
+    featureList: [
+      "24/7 AI receptionist",
+      "Appointment booking",
+      "Zenchef plugin",
+      "Google Calendar plugin",
+      "WhatsApp plugin",
+    ],
     description,
     provider: { "@id": ORGANISATION_ID },
   };
