@@ -66,7 +66,7 @@ const dictionaries = {
       title: "Receptie-energie.",
       titleAccent: "Geen gemiste belletjes.",
       intro:
-        "Gebouwd voor teams die op de telefoon leven — restaurants, salons, klinieken en lokale winkels die geen booking kunnen missen.",
+        "Gebouwd voor teams die op de telefoon leven — restaurants, salons, klinieken en lokale winkels die geen bookingen kunnen missen.",
       items: [
         {
           title: "24/7 bereikbaar",
@@ -78,12 +78,12 @@ const dictionaries = {
         },
         {
           title: "Klinkt menselijk",
-          body: "Natuurlijke toon, geen robotmenu’s. Gasten stellen vragen, wijzigen bookings en voelen zich geholpen.",
+          body: "Natuurlijke toon, geen robotmenu’s. Gasten stellen vragen, wijzigen bookingen en voelen zich geholpen.",
         },
       ],
     },
     industries: {
-      title: "Voor bedrijven die van bookings leven",
+      title: "Voor bedrijven die van bookingen leven",
       intro:
         "Eén Pokkie, jouw tone of voice — of je nou serveert, knipt of de zaak runt.",
       items: [
@@ -111,7 +111,7 @@ const dictionaries = {
             "Bevestig afspraken zodat no-shows dalen",
           ],
           stat: "+18%",
-          statLabel: "gem. meer bookings gevangen",
+          statLabel: "gem. meer bookingen gevangen",
           image:
             "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80",
         },
@@ -127,7 +127,7 @@ const dictionaries = {
           stat: "+20%",
           statLabel: "gem. meer vragen beantwoord",
           image:
-            "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&w=1600&q=80",
+            "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=1600&q=80",
         },
       ],
     },
@@ -144,7 +144,7 @@ const dictionaries = {
           body: "Diensten, openingstijden, toon, boekingsregels. Pokkie leert hoe jouw zaak praat.",
         },
         {
-          title: "Meer bookings",
+          title: "Meer bookingen",
           body: "Zij neemt op, boekt en vat samen. Jij blijft op de vloer waar het gebeurt.",
         },
       ],
@@ -164,7 +164,7 @@ const dictionaries = {
         {
           id: "googleCalendar",
           name: "Google Calendar",
-          body: "Afspraken verschijnen in de agenda die je al deelt — geen extra bookingstool om bij te houden.",
+          body: "Afspraken verschijnen in de agenda die je al deelt — geen extra boekingstool om bij te houden.",
         },
         {
           id: "whatsapp",
@@ -194,7 +194,7 @@ const dictionaries = {
       ],
     },
     testimonials: {
-      title: "Geliefd waar bookings tellen",
+      title: "Geliefd waar bookingen tellen",
       items: [
         {
           quote:
@@ -233,7 +233,7 @@ const dictionaries = {
         },
         {
           q: "Moeten we van systeem wisselen?",
-          a: "Nee. Pokkie heeft plugins voor onder meer Zenchef, Google Calendar en WhatsApp, zodat bookings en berichten landen in de apps die al in je zaak staan.",
+          a: "Nee. Pokkie heeft plugins voor onder meer Zenchef, Google Calendar en WhatsApp, zodat bookingen en berichten landen in de apps die al in je zaak staan.",
         },
       ],
     },
@@ -399,7 +399,7 @@ const dictionaries = {
           stat: "+20%",
           statLabel: "avg. more enquiries answered",
           image:
-            "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&w=1600&q=80",
+            "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=1600&q=80",
         },
       ],
     },
